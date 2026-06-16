@@ -1,0 +1,141 @@
+h1 {
+    text-align: center;
+    padding: 10px;
+}
+
+.card-container {
+    min-height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+    padding-left: 35px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.card {
+    height: 200px;
+    width: 300px;
+}
+
+.img,
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+img {
+    border-radius: 10px;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.loading-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -99px;
+}
+
+.loading {
+    width: 60px;
+    height: 60px;
+    border: 6px solid #e5e7eb;
+    border-top: 6px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.btn-container {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.btn-container button {
+    width: fit-content;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: #38bdf8;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-container button:hover {
+    transform: translateY(-3px);
+}
+
+.btn-container button:active {
+    background-color: #dadada;
+}
+
+.index {
+    padding: 10px 20px;
+    margin-top: -10px;
+    font-size: 20px;
+}
+
+
+.btn-container button:disabled {
+    background-color: #ccc;
+    color: #666;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+@media (max-width: 600px) {
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+        margin-left: -15px;
+    }
+
+    .card {
+        height: 100px;
+        width: 150px;
+    }
+
+    .card-container h2 {
+        font-size: 10px;
+    }
+
+    .btn-container {
+        height: 25px;
+        gap: 15px;
+    }
+
+    .btn-container button {
+        padding: 5px 10px;
+        cursor: pointer;
+        font-size: 10px;
+        margin-top: 40px;
+    }
+
+
+    .index {
+        padding: 5px 10px;
+        margin-top: 30px;
+        font-size: 10px;
+    }
+
+
+}
